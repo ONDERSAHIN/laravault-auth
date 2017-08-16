@@ -1,4 +1,4 @@
-LaraVault-Auth
+Laravault-Auth
 ==============
 
 Laravel package for using Hashicorp's Vault as an Authentication Provider.  Authenticates users against an instance of Vault, stores user information in the session, and handles closing of the laravel session when the vault ttl expires.
@@ -9,12 +9,14 @@ Installation
 1. Install the LaravaultAuth package manually or with composer:
 
    - Manually
-     
-        git clone https://github.com/codybuell/laravault-auth.git vendor/codybuell/laravault-auth
 
-        # edit composer.json, under autoload -> psr-4 append:
+     ```
+     git clone https://github.com/codybuell/laravault-auth.git vendor/codybuell/laravault-auth
 
-        "CodyBuell\\LaravaultAuth\\": "vendor/codybuell/laravault-auth/src"
+     # edit composer.json, under autoload -> psr-4 append:
+
+     "CodyBuell\\LaravaultAuth\\": "vendor/codybuell/laravault-auth/src"
+     ```
 
   - Composer
 
