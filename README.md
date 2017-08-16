@@ -10,7 +10,9 @@ Installation
 
    - Composer
 
-        composer require codybuell/laravault-auth
+     ```
+     composer require codybuell/laravault-auth
+     ```
 
    - Manually
 
