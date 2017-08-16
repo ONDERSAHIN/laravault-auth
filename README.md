@@ -8,7 +8,7 @@ Installation
 
 1. Install the LaravaultAuth package manually or with composer:
 
-  - Composer
+   - Composer
 
         composer require codybuell/laravault-auth
 
