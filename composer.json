@@ -1,0 +1,27 @@
+{
+    "name": "codybuell/laravault-auth",
+    "description": "Package for authenticating Laravel against Hashicorp's Vault.",
+    "keywords": ["laravel", "vault", "authentication"],
+    "type": "laravel-package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "codybuell",
+            "email": "cody@codybuell.com"
+        }
+    ],
+    "require": {
+        "mashape/unirest-php": "^3.0"
+    },
+    "require-dev": {},
+    "autoload": {
+      "psr-4": {
+        "CodyBuell\\LaravaultAuth\\": "src/"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "CodyBuell\\LaravaultAuth\\": "tests/"
+      }
+    }
+}
