@@ -8,6 +8,10 @@ Installation
 
 1. Install the LaravaultAuth package manually or with composer:
 
+  - Composer
+
+        composer require codybuell/laravault-auth
+
    - Manually
 
      ```
@@ -17,10 +21,6 @@ Installation
 
      "CodyBuell\\LaravaultAuth\\": "vendor/codybuell/laravault-auth/src"
      ```
-
-  - Composer
-
-        composer require codybuell/laravault-auth
 
 2. Add provider to `config/app.php` providers array:
 
