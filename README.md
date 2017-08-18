@@ -1,7 +1,7 @@
 Laravault-Auth
 ==============
 
-Laravel package for using Hashicorp's Vault as an Authentication Provider.  Authenticates users against an instance of Vault, stores user information in the session, and handles closing of the laravel session when the vault ttl expires.
+Laravel package for using Hashicorp's Vault as an Authentication Provider.  Authenticates users against an instance of Vault, stores user information in the session, and handles closing of the laravel session when the vault ttl expires.  Built and tested with Laravel 5.4.
 
 Installation
 ------------
