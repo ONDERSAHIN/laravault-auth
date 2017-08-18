@@ -59,5 +59,5 @@ Usage
 Todo
 ----
 
-- write middleware that checks session vaultuser_lease_expiration and logs out if current time is past
 - write tests
+- add option to not tie laravel session length to vault ttl
