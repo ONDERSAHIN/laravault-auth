@@ -104,16 +104,17 @@ class LaravaultAuthUserProvider implements UserProvider {
     // if successful set attributes and return true
     if ($response->code == 200) {
 
-      // determin the lease expiration
-      $now = new \DateTime();
-      $end = $now->modify('+'.$response->body->auth->lease_duration.' seconds');
+      // determin the lease expiration, take 30 seconds off from whatever vault provides as the ttl
+      $now    = new \DateTime();
+      $length = $response->body->auth->lease_duration - 30;
+      $expir  = $now->modify('+'.$length.' seconds');
 
       // set session variables
       $user->policies         = $response->body->auth->policies;
       $user->client_token     = $response->body->auth->client_token;
       $user->accessor         = $response->body->auth->accessor;
       $user->request_id       = $response->body->request_id;
-      $user->lease_expiration = $end;
+      $user->lease_expiration = $expir;
 
       return true;
 

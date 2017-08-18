@@ -11,7 +11,7 @@ class LaravaultAuthServiceProvider extends ServiceProvider {
      *
      * @return void
      */
-    public function boot() {
+    public function boot(\Illuminate\Contracts\Http\Kernel $kernel) {
 
       // register 'vault' auth provider
       Auth::provider('vault', function($app, array $config) {
@@ -22,6 +22,9 @@ class LaravaultAuthServiceProvider extends ServiceProvider {
       $this->publishes([
         __DIR__.'/../config/laravault-auth.php' => config_path('laravault-auth.php'),
       ]);
+
+      // prepend our middleware for session end check
+      $kernel->prependMiddleware(Middleware\LogoutOnSessionTimeout::class);
 
     }
 
